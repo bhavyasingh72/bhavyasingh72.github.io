@@ -6,8 +6,8 @@
   <title>Bhavya Singh | Student Portfolio</title>
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- Google Fonts: Inter for clean modern look -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <!-- Google Fonts: Inter for clean LinkedIn-like style -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -17,14 +17,14 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #f4f7fc;
-      color: #1e293b;
+      background: #f3f6fa;
+      color: #1e2a3e;
       line-height: 1.5;
       scroll-behavior: smooth;
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1080px;
       margin: 0 auto;
       padding: 24px 20px;
     }
@@ -34,9 +34,8 @@
       background: white;
       border-radius: 28px;
       padding: 1.8rem 2rem 1.5rem 2rem;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
-      margin-bottom: 28px;
-      transition: all 0.2s;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      margin-bottom: 24px;
     }
 
     .profile-flex {
@@ -49,29 +48,29 @@
 
     .profile-left {
       display: flex;
-      gap: 22px;
+      gap: 20px;
       flex-wrap: wrap;
       align-items: center;
     }
 
     .avatar-circle {
       background: linear-gradient(145deg, #0a66c2, #004182);
-      width: 96px;
-      height: 96px;
+      width: 90px;
+      height: 90px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 3rem;
+      font-size: 2.8rem;
       color: white;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
     }
 
     .profile-info h1 {
-      font-size: 2rem;
+      font-size: 1.9rem;
       font-weight: 700;
       color: #000;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
 
     .pronouns {
@@ -90,6 +89,7 @@
       display: inline-block;
       margin-left: 8px;
       font-weight: 500;
+      cursor: pointer;
     }
 
     .headline {
@@ -135,6 +135,7 @@
       color: #0a66c2;
       margin-top: 8px;
       font-weight: 500;
+      cursor: pointer;
     }
 
     /* get started row */
@@ -161,6 +162,7 @@
       color: #0a66c2;
       text-decoration: none;
       font-weight: 600;
+      cursor: pointer;
     }
 
     /* stats row */
@@ -191,6 +193,7 @@
       display: block;
       margin-top: 5px;
       text-decoration: none;
+      cursor: pointer;
     }
 
     /* Two column layout */
@@ -216,8 +219,7 @@
       border-radius: 24px;
       padding: 1.6rem;
       margin-bottom: 24px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
-      transition: 0.1s;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
       border: 1px solid #f0f2f5;
     }
 
@@ -225,8 +227,8 @@
       font-size: 1.3rem;
       font-weight: 700;
       margin-bottom: 1rem;
-      border-left: 5px solid #0a66c2;
-      padding-left: 16px;
+      border-left: 4px solid #0a66c2;
+      padding-left: 14px;
     }
 
     .about-text {
@@ -246,6 +248,7 @@
     .follower-count {
       font-weight: 700;
       font-size: 1rem;
+      margin-bottom: 12px;
     }
 
     .create-post-btn {
@@ -267,15 +270,6 @@
       background: #0a66c210;
     }
 
-    .show-all {
-      text-align: right;
-      font-size: 0.75rem;
-      margin-top: 14px;
-      color: #0a66c2;
-      font-weight: 500;
-      cursor: pointer;
-    }
-
     /* Education */
     .edu-item {
       margin-bottom: 1rem;
@@ -292,19 +286,25 @@
       margin-top: 4px;
     }
 
-    /* Analytics card (only analytics, no suggested) */
-    .analytics-stats p {
-      margin: 12px 0;
+    /* Suggested & Analytics */
+    .suggested-item, .analytics-item {
       display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 18px;
     }
 
     .private-note {
       font-size: 0.7rem;
       color: #8a99b0;
       margin-top: 8px;
+    }
+
+    .analytics-stats p {
+      margin: 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
     }
 
     hr {
@@ -319,17 +319,7 @@
       color: #0a66c2;
       font-weight: 500;
       text-decoration: none;
-    }
-
-    /* extra card for skills / add section like original but minimal */
-    .profile-tip {
-      background: #fafcff;
-      border-radius: 20px;
-      padding: 1rem 1.2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
+      cursor: pointer;
     }
 
     footer {
@@ -353,7 +343,7 @@
 </head>
 <body>
 <div class="container">
-  <!-- Profile Header - exactly as per screenshot (no extra projects) -->
+  <!-- Profile Header - Exactly as per screenshot -->
   <div class="profile-card">
     <div class="profile-flex">
       <div class="profile-left">
@@ -362,7 +352,7 @@
         </div>
         <div class="profile-info">
           <h1>Bhavya Singh</h1>
-          <div class="pronouns">She/Her · <span class="verification-badge"><i class="fas fa-check-circle"></i> Add verification badge</span></div>
+          <div class="pronouns">She/Her · <span class="verification-badge" id="verifyBadge"><i class="fas fa-check-circle"></i> Add verification badge</span></div>
           <div class="headline">B.Tech student at GBU'29</div>
           <div class="location-contact">
             <span><i class="fas fa-map-marker-alt"></i> Delhi, India</span>
@@ -374,40 +364,40 @@
       <div class="profile-right">
         <div class="open-to"><i class="fas fa-briefcase"></i> Open to</div>
         <div style="font-size: 0.7rem; font-weight: 500;">Add section</div>
-        <div class="add-section">Enhance profile</div>
+        <div class="add-section" id="enhanceProfile">Enhance profile</div>
       </div>
     </div>
 
-    <!-- Get started row: as per original -->
+    <!-- Get started row -->
     <div class="get-started-row">
       <div class="gs-item">
         <i class="fas fa-bullhorn" style="color:#0a66c2;"></i>
-        <span>Show recruiters you’re open to work — you control who sees this. <a href="#">Get started</a></span>
+        <span>Show recruiters you’re open to work — you control who sees this. <a id="openToWorkLink">Get started</a></span>
       </div>
       <div class="gs-item">
         <i class="fas fa-chart-line" style="color:#0a66c2;"></i>
-        <span>Share that you’re hiring and attract qualified candidates. <a href="#">Get started</a></span>
+        <span>Share that you’re hiring and attract qualified candidates. <a id="hiringLink">Get started</a></span>
       </div>
     </div>
 
-    <!-- stats row: 5 profile views / 0 impressions / 1 search appearance -->
+    <!-- stats row -->
     <div class="stats-row">
       <div class="stat-block">
         <span class="stat-number">5</span> profile views <br>
-        <a href="#" class="stat-link">Discover who’s viewed your account</a>
+        <a class="stat-link" id="viewedLink">Discover who’s viewed your account</a>
       </div>
       <div class="stat-block">
         <span class="stat-number">0</span> post impressions <br>
-        <a href="#" class="stat-link">Start a post to increase engagement</a>
+        <a class="stat-link" id="postImpressionLink">Start a post to increase engagement</a>
       </div>
       <div class="stat-block">
         <span class="stat-number">1</span> search appearance <br>
-        <a href="#" class="stat-link">See how often you appear in search results</a>
+        <a class="stat-link" id="searchLink">See how often you appear in search results</a>
       </div>
     </div>
   </div>
 
-  <!-- Two columns: main (About, Activity, Education) + Sidebar (Analytics only, no suggested) -->
+  <!-- Two columns: main (About, Activity, Education) + Sidebar (Suggested, Analytics) -->
   <div class="two-columns">
     <!-- LEFT / MAIN COLUMN -->
     <div class="main-col">
@@ -419,19 +409,18 @@
         </div>
       </div>
 
-      <!-- Activity section: followers, no posts yet, create a post -->
+      <!-- Activity section -->
       <div class="card">
         <div class="card-title">Activity</div>
         <div class="activity-box">
           <div class="follower-count"><i class="fas fa-users"></i> 7 followers</div>
-          <p style="margin: 12px 0 4px;">You haven’t posted yet</p>
+          <p style="margin: 12px 0 4px;">You haven't posted yet</p>
           <p style="font-size: 0.8rem; color:#5e6f8d;">Posts you share will be displayed here.</p>
-          <a href="#" class="create-post-btn" id="createPostBtn"><i class="fas fa-pen-fancy"></i> Create a post</a>
-          <div class="show-all" id="showAllActivity">Show all <i class="fas fa-arrow-right"></i></div>
+          <a class="create-post-btn" id="createPostBtn"><i class="fas fa-pen-fancy"></i> Create a post</a>
         </div>
       </div>
 
-      <!-- Education: Gautam Buddha University -->
+      <!-- Education -->
       <div class="card">
         <div class="card-title">Education</div>
         <div class="edu-item">
@@ -442,11 +431,29 @@
       </div>
     </div>
 
-    <!-- RIGHT / SIDEBAR: ONLY Analytics (removed Suggested for you completely) -->
+    <!-- RIGHT / SIDEBAR: Suggested for you & Analytics -->
     <div class="side-col">
-      <!-- Analytics card - private to you -->
+      <!-- Suggested for you card -->
       <div class="card">
-        <div class="card-title" style="font-size: 1.2rem;">Analytics</div>
+        <div class="card-title" style="font-size: 1.1rem;">Suggested for you</div>
+        <div class="suggested-item">
+          <span><i class="fas fa-user-plus"></i> Priya Mehta · Product Designer</span>
+          <i class="fas fa-ellipsis-h" style="cursor:pointer;"></i>
+        </div>
+        <div class="suggested-item">
+          <span><i class="fas fa-user-plus"></i> Ananya Verma · Data Analyst</span>
+          <i class="fas fa-ellipsis-h" style="cursor:pointer;"></i>
+        </div>
+        <div class="suggested-item">
+          <span><i class="fas fa-user-plus"></i> Rohan Kapoor · Software Engineer</span>
+          <i class="fas fa-ellipsis-h" style="cursor:pointer;"></i>
+        </div>
+        <div class="private-note">Private to you</div>
+      </div>
+
+      <!-- Analytics card -->
+      <div class="card">
+        <div class="card-title" style="font-size: 1.1rem;">Analytics</div>
         <div class="private-note" style="margin-bottom: 12px;">Private to you</div>
         <hr>
         <div class="analytics-stats">
@@ -454,89 +461,76 @@
           <p><span class="stat-number">0</span> post impressions</p>
           <p><span class="stat-number">1</span> search appearance</p>
         </div>
-        <a href="#" class="insight-link" id="insightLink">Discover insights →</a>
-      </div>
-      
-      <!-- Minimal extra card to match "Add section / enhance profile" vibe but not intrusive -->
-      <div class="card" style="background: #fafcff;">
-        <div class="profile-tip">
-          <span style="font-weight: 500;"><i class="fas fa-chart-simple"></i> Profile strength</span>
-          <span style="font-size:0.7rem; background:#eef3fc; padding: 4px 12px; border-radius: 40px;">Intermediate</span>
-        </div>
-        <div class="private-note" style="margin-top: 12px;">Add skills, projects, or certifications to enhance visibility.</div>
-        <div style="margin-top: 10px;"><a href="#" style="font-size:0.75rem; color:#0a66c2; text-decoration:none;">+ Add section</a></div>
+        <a class="insight-link" id="insightLink">Discover insights →</a>
       </div>
     </div>
   </div>
 
   <footer>
-    <p>© 2026 Bhavya Singh — Student Portfolio | Based on profile snapshot</p>
+    <p>© 2026 Bhavya Singh — Student Portfolio</p>
   </footer>
 </div>
 
-<!-- Simple interactive simulations (only UI feedback, no extra projects/content added) -->
 <script>
-  // Get started buttons - demo alerts
-  const getStartedLinks = document.querySelectorAll('.gs-item a');
-  getStartedLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      alert("✨ You can manage open-to-work preferences and recruiter visibility in settings.");
-    });
+  // All interactive alerts as per screenshot functionality
+  // Verification badge
+  document.getElementById('verifyBadge')?.addEventListener('click', () => {
+    alert("✨ Verification badge: Verify your email or identity to get a verification mark on your profile.");
   });
 
-  // Create a post button simulation
-  const createPost = document.getElementById('createPostBtn');
-  if (createPost) {
-    createPost.addEventListener('click', (e) => {
-      e.preventDefault();
-      alert("📝 Start a post: share your video editing projects, tech learnings, or academic achievements!");
-    });
-  }
-
-  // Discover who viewed profile link
-  const viewLinks = document.querySelectorAll('.stat-link');
-  viewLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      alert("🔍 Profile analytics: upgrade for detailed insights or keep engaging to grow visibility.");
-    });
+  // Enhance profile
+  document.getElementById('enhanceProfile')?.addEventListener('click', () => {
+    alert("📝 Enhance your profile: Add skills, certifications, projects, and a professional summary to stand out.");
   });
 
-  // Show all activity link
-  const showAllActivity = document.getElementById('showAllActivity');
-  if (showAllActivity) {
-    showAllActivity.addEventListener('click', (e) => {
-      e.preventDefault();
-      alert("📢 Activity feed: posts, comments, and reactions will appear once you start engaging.");
-    });
-  }
+  // Open to work Get started
+  document.getElementById('openToWorkLink')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    alert("🔓 Open to work: You can control who sees your 'Open to Work' status. Turn it on to let recruiters know you're looking for opportunities.");
+  });
 
-  // insight link analytics
-  const insightLink = document.getElementById('insightLink');
-  if (insightLink) {
-    insightLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      alert("📊 More analytics: See who viewed your profile, post reach, and more in-depth metrics.");
-    });
-  }
+  // Hiring Get started
+  document.getElementById('hiringLink')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    alert("💼 Hiring: Post a job or share that you're hiring to attract qualified candidates from your network.");
+  });
 
-  // add section dummy
-  const addSectionBtn = document.querySelector('.profile-tip a');
-  if (addSectionBtn) {
-    addSectionBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      alert("➕ You can add sections like Projects, Certifications, Languages to strengthen your profile.");
-    });
-  }
+  // Discover who viewed
+  document.getElementById('viewedLink')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    alert("👁️ Profile views: Upgrade to Premium to see exactly who viewed your profile, or keep growing your network organically.");
+  });
 
-  // optional for "Add verification badge" demo
-  const verifyBadge = document.querySelector('.verification-badge');
-  if (verifyBadge) {
-    verifyBadge.addEventListener('click', () => {
-      alert("Verification badge: Verify your identity or email to get a verification mark.");
+  // Start a post to increase engagement
+  document.getElementById('postImpressionLink')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    alert("📢 Start a post: Share your video editing projects, academic achievements, or tech learnings to boost engagement.");
+  });
+
+  // Search appearance link
+  document.getElementById('searchLink')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    alert("🔍 Search appearance: Optimize your profile with relevant keywords to appear more often in recruiter searches.");
+  });
+
+  // Create a post button
+  document.getElementById('createPostBtn')?.addEventListener('click', () => {
+    alert("📝 Create a post: Share your thoughts, projects, or video editing work with your network. Get feedback and grow your presence!");
+  });
+
+  // Insight link analytics
+  document.getElementById('insightLink')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    alert("📊 Analytics insights: See detailed metrics about profile views, post reach, and search appearances over time.");
+  });
+
+  // Suggested for you dots (optional)
+  const dots = document.querySelectorAll('.suggested-item .fa-ellipsis-h');
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      alert("Not interested or manage suggestions — you can customize who appears here.");
     });
-  }
+  });
 </script>
 </body>
 </html>
