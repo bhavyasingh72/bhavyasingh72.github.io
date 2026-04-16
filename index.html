@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Bhavya Singh | ECE Portfolio</title>
+  <title>Bhavya Singh | Student Portfolio</title>
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- Google Fonts: Clean & Professional -->
+  <!-- Google Fonts: Inter for clean LinkedIn-like style -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -17,30 +17,28 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #f4f7fc;
+      background: #f3f6fa;
       color: #1e2a3e;
       line-height: 1.5;
       scroll-behavior: smooth;
     }
 
-    /* container layout */
     .container {
-      max-width: 1100px;
+      max-width: 1080px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 24px 20px;
     }
 
-    /* header / profile card */
+    /* Profile Card (Header) */
     .profile-card {
       background: white;
       border-radius: 28px;
-      padding: 2rem 2rem 1.5rem 2rem;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      padding: 1.8rem 2rem 1.5rem 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
       margin-bottom: 24px;
-      transition: all 0.2s;
     }
 
-    .profile-row {
+    .profile-flex {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -50,15 +48,15 @@
 
     .profile-left {
       display: flex;
-      gap: 24px;
+      gap: 20px;
       flex-wrap: wrap;
       align-items: center;
     }
 
-    .avatar {
+    .avatar-circle {
       background: linear-gradient(145deg, #0a66c2, #004182);
-      width: 96px;
-      height: 96px;
+      width: 90px;
+      height: 90px;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -72,39 +70,42 @@
       font-size: 1.9rem;
       font-weight: 700;
       color: #000;
+      margin-bottom: 2px;
     }
 
     .pronouns {
-      color: #666;
+      color: #5e6f8d;
       font-size: 0.85rem;
       font-weight: 500;
       margin: 4px 0;
     }
 
-    .badge-verified {
+    .verification-badge {
       background: #eef3fc;
       color: #0a66c2;
       font-size: 0.7rem;
-      border-radius: 20px;
-      padding: 4px 10px;
+      border-radius: 30px;
+      padding: 4px 12px;
       display: inline-block;
-      margin-top: 6px;
+      margin-left: 8px;
       font-weight: 500;
     }
 
     .headline {
-      margin: 12px 0 4px;
       font-weight: 500;
-      color: #333;
+      color: #1e2a3e;
+      margin: 10px 0 4px;
+      font-size: 0.95rem;
     }
 
-    .location {
+    .location-contact {
       color: #5e6f8d;
       font-size: 0.85rem;
       margin: 6px 0;
       display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
       align-items: center;
-      gap: 6px;
     }
 
     .connections {
@@ -117,34 +118,61 @@
     .profile-right {
       background: #eef3fc;
       border-radius: 32px;
-      padding: 10px 18px;
+      padding: 10px 20px;
       text-align: center;
+      min-width: 130px;
     }
 
     .open-to {
       font-weight: 700;
       color: #0a5e3a;
+      font-size: 0.9rem;
     }
 
-    .badge-open {
-      background: #c8f0e1;
-      border-radius: 40px;
-      padding: 4px 12px;
+    .add-section {
+      font-size: 0.7rem;
+      color: #0a66c2;
+      margin-top: 8px;
+      font-weight: 500;
+    }
+
+    /* get started row */
+    .get-started-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      background: #f9fafc;
+      border-radius: 24px;
+      padding: 16px 20px;
+      margin-top: 24px;
+      border: 1px solid #edf2f7;
+    }
+
+    .gs-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       font-size: 0.8rem;
+      color: #1f2a48;
+    }
+
+    .gs-item a {
+      color: #0a66c2;
+      text-decoration: none;
       font-weight: 600;
     }
 
     /* stats row */
     .stats-row {
       display: flex;
-      gap: 28px;
-      margin: 20px 0 0 0;
-      border-top: 1px solid #e2e8f0;
-      padding-top: 20px;
       flex-wrap: wrap;
+      gap: 28px;
+      margin-top: 20px;
+      padding-top: 18px;
+      border-top: 1px solid #e9edf2;
     }
 
-    .stat-item {
+    .stat-block {
       font-size: 0.85rem;
       color: #2c3e66;
     }
@@ -153,147 +181,143 @@
       font-weight: 800;
       font-size: 1rem;
       color: #0a66c2;
+      margin-right: 4px;
     }
 
-    /* two column layout: main + sidebar */
+    .stat-link {
+      color: #5e6f8d;
+      font-size: 0.75rem;
+      display: block;
+      margin-top: 4px;
+      text-decoration: none;
+    }
+
+    /* Two column layout */
     .two-columns {
       display: flex;
       gap: 28px;
       flex-wrap: wrap;
     }
 
-    .main-content {
+    .main-col {
       flex: 2;
       min-width: 260px;
     }
 
-    .sidebar {
+    .side-col {
       flex: 1.2;
       min-width: 240px;
     }
 
-    /* cards */
+    /* Cards */
     .card {
       background: white;
       border-radius: 24px;
       padding: 1.5rem;
       margin-bottom: 24px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-      transition: 0.2s;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+      transition: 0.1s;
     }
 
     .card-title {
       font-size: 1.3rem;
       font-weight: 700;
       margin-bottom: 1rem;
-      border-left: 5px solid #0a66c2;
+      border-left: 4px solid #0a66c2;
       padding-left: 14px;
     }
 
     .about-text {
-      color: #334155;
-      line-height: 1.5;
+      color: #2c3e50;
+      line-height: 1.55;
       font-size: 0.95rem;
     }
 
-    /* projects list */
-    .project-item {
-      margin-bottom: 1.8rem;
-      border-bottom: 1px solid #eef2f6;
-      padding-bottom: 1.2rem;
+    /* Activity section */
+    .activity-box {
+      background: #f8fafd;
+      border-radius: 20px;
+      padding: 1.5rem;
+      text-align: center;
     }
 
-    .project-item:last-child {
-      border-bottom: none;
-    }
-
-    .project-name {
+    .follower-count {
       font-weight: 700;
-      font-size: 1.1rem;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: #0a2647;
+      font-size: 1rem;
     }
 
-    .project-name i {
+    .create-post-btn {
+      background: white;
+      border: 1px solid #0a66c2;
+      border-radius: 40px;
+      padding: 8px 18px;
+      font-size: 0.8rem;
+      font-weight: 600;
       color: #0a66c2;
-      font-size: 1.2rem;
+      display: inline-block;
+      margin-top: 16px;
+      text-decoration: none;
+      cursor: pointer;
     }
 
-    .project-desc {
-      font-size: 0.85rem;
-      color: #3a546d;
-      margin-top: 6px;
-      line-height: 1.45;
+    .show-all {
+      text-align: right;
+      font-size: 0.75rem;
+      margin-top: 12px;
+      color: #0a66c2;
+      font-weight: 500;
     }
 
-    /* education */
+    /* Education */
     .edu-item {
       margin-bottom: 1rem;
     }
 
     .edu-title {
       font-weight: 700;
+      font-size: 1rem;
     }
 
     .edu-meta {
       font-size: 0.8rem;
       color: #5c6f91;
+      margin-top: 4px;
     }
 
-    /* activity */
-    .activity-placeholder {
-      background: #f8fafc;
-      border-radius: 20px;
-      padding: 20px;
-      text-align: center;
-      color: #4a627a;
-    }
-
-    .btn-outline-link {
-      background: white;
-      border: 1px solid #0a66c2;
-      border-radius: 30px;
-      padding: 8px 16px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: #0a66c2;
-      display: inline-block;
-      margin-top: 12px;
-      text-decoration: none;
-    }
-
-    .suggested-item {
+    /* suggested & analytics */
+    .suggested-item, .analytics-item {
       display: flex;
       justify-content: space-between;
-      align-items: center;
       margin-bottom: 18px;
     }
 
-    .insight-text {
-      font-size: 0.8rem;
-      color: #2c3e66;
+    .private-note {
+      font-size: 0.7rem;
+      color: #8a99b0;
+      margin-top: 8px;
+    }
+
+    .analytics-stats p {
+      margin: 8px 0;
+    }
+
+    hr {
+      margin: 12px 0;
+      border-color: #eef2f8;
     }
 
     footer {
       text-align: center;
-      padding: 2rem;
-      font-size: 0.75rem;
-      color: #6c86a3;
+      font-size: 0.7rem;
+      color: #6f8aac;
+      padding: 2rem 0 1rem;
       border-top: 1px solid #e2e8f0;
-      margin-top: 2rem;
+      margin-top: 20px;
     }
 
-    hr {
-      margin: 1rem 0;
-      border-color: #eef2f8;
-    }
-
-    @media (max-width: 780px) {
-      .profile-left {
+    @media (max-width: 750px) {
+      .profile-flex {
         flex-direction: column;
-        align-items: flex-start;
       }
       .card-title {
         font-size: 1.2rem;
@@ -302,226 +326,191 @@
   </style>
 </head>
 <body>
-
 <div class="container">
-  <!-- Profile Header Section (LinkedIn style) -->
+  <!-- Profile Header - Exactly as per screenshot 1 -->
   <div class="profile-card">
-    <div class="profile-row">
+    <div class="profile-flex">
       <div class="profile-left">
-        <div class="avatar">
-          <i class="fas fa-user-astronaut"></i>
+        <div class="avatar-circle">
+          <i class="fas fa-user-circle"></i>
         </div>
         <div class="profile-info">
           <h1>Bhavya Singh</h1>
-          <div class="pronouns">She/Her · <span class="badge-verified"><i class="fas fa-check-circle"></i> Verification badge</span></div>
-          <div class="headline">B.Tech ECE student at GBU'29 | IoT & Embedded Enthusiast</div>
-          <div class="location"><i class="fas fa-map-marker-alt"></i> Delhi, India · <i class="fas fa-envelope"></i> Contact info</div>
+          <div class="pronouns">She/Her · <span class="verification-badge"><i class="fas fa-check-circle"></i> Add verification badge</span></div>
+          <div class="headline">B.Tech student at GBU'29</div>
+          <div class="location-contact">
+            <span><i class="fas fa-map-marker-alt"></i> Delhi, India</span>
+            <span><i class="fas fa-envelope"></i> Contact info</span>
+          </div>
           <div class="connections"><i class="fas fa-user-friends"></i> 7 connections</div>
         </div>
       </div>
       <div class="profile-right">
         <div class="open-to"><i class="fas fa-briefcase"></i> Open to</div>
-        <div class="badge-open mt-1">Internships / Research</div>
-        <div style="font-size: 0.7rem; margin-top: 8px;">Add section · Enhance profile</div>
+        <div style="font-size: 0.7rem; font-weight: 500;">Add section</div>
+        <div class="add-section">Enhance profile</div>
       </div>
     </div>
 
-    <!-- open to work / hiring widgets -->
-    <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 24px; background: #f9fafb; border-radius: 24px; padding: 12px 20px;">
-      <div style="display: flex; align-items: center; gap: 12px;">
+    <!-- Get started row: exactly as per screenshot -->
+    <div class="get-started-row">
+      <div class="gs-item">
         <i class="fas fa-bullhorn" style="color:#0a66c2;"></i>
-        <span style="font-size: 0.8rem;">Show recruiters you’re open to work — you control who sees this. <a href="#" style="color:#0a66c2;">Get started</a></span>
+        <span>Show recruiters you’re open to work — you control who sees this. <a href="#">Get started</a></span>
       </div>
-      <div style="display: flex; align-items: center; gap: 12px;">
+      <div class="gs-item">
         <i class="fas fa-chart-line" style="color:#0a66c2;"></i>
-        <span style="font-size: 0.8rem;">Share that you’re hiring and attract qualified candidates. <a href="#" style="color:#0a66c2;">Get started</a></span>
+        <span>Share that you’re hiring and attract qualified candidates. <a href="#">Get started</a></span>
       </div>
     </div>
 
-    <!-- stats row: views / impressions -->
+    <!-- stats row: 5 profile views / 0 impressions / 1 search appearance -->
     <div class="stats-row">
-      <div class="stat-item"><span class="stat-number">5</span> profile views <span style="color:#6c86a3;">Discover who’s viewed your account</span></div>
-      <div class="stat-item"><span class="stat-number">0</span> post impressions <span style="color:#6c86a3;">Start a post to increase engagement</span></div>
-      <div class="stat-item"><span class="stat-number">1</span> search appearance <span style="color:#6c86a3;">See how often you appear in search results</span></div>
+      <div class="stat-block">
+        <span class="stat-number">5</span> profile views <br>
+        <a href="#" class="stat-link">Discover who’s viewed your account</a>
+      </div>
+      <div class="stat-block">
+        <span class="stat-number">0</span> post impressions <br>
+        <a href="#" class="stat-link">Start a post to increase engagement</a>
+      </div>
+      <div class="stat-block">
+        <span class="stat-number">1</span> search appearance <br>
+        <a href="#" class="stat-link">See how often you appear in search results</a>
+      </div>
     </div>
   </div>
 
-  <!-- Two column layout -->
+  <!-- Two columns: main (About, Activity, Education) + Sidebar (Suggested, Analytics) -->
   <div class="two-columns">
-    <!-- MAIN CONTENT (About, Projects, Activity) -->
-    <div class="main-content">
-      <!-- About Section -->
+    <!-- LEFT / MAIN COLUMN -->
+    <div class="main-col">
+      <!-- About section exactly as screenshot text -->
       <div class="card">
-        <div class="card-title"><i class="fas fa-user-circle" style="margin-right: 8px;"></i> About</div>
+        <div class="card-title">About</div>
         <div class="about-text">
-          I am a B.Tech student at Gautam Buddha University with a strong passion for video editing and embedded systems. Over the past two years, I have consistently honed my skills in video production and developed solid practical experience. Recently, I have dived deep into IoT, AI, and hardware prototyping — building real-world solutions that merge creativity with engineering. I am particularly interested in technical aspects of electronics and smart systems, which has helped me build a deeper understanding of workflows, sensors, and automation.
+          I am a B.Tech student at Gautam Buddha University with a strong passion for video editing. Over the past two years, I have consistently honed my skills and developed solid practical experience in this field. I am particularly interested in the technical aspects of video production, which has helped me build a deeper understanding of editing tools, workflows, and creative techniques.
         </div>
       </div>
 
-      <!-- Projects Section (Only specified: Automatic Gardening Watering System & Blind Navigation Stick, plus extra mentioned in original? but we include all major from context + clean) -->
+      <!-- Activity section: followers, no posts yet, create a post -->
       <div class="card">
-        <div class="card-title"><i class="fas fa-microchip"></i> Featured Projects</div>
-        
-        <div class="project-item">
-          <div class="project-name"><i class="fas fa-seedling"></i> 🌿 Automatic Gardening Watering System</div>
-          <div class="project-desc">IoT-based smart irrigation using soil moisture sensor (YL-69), NodeMCU, and water pump. Monitors real-time humidity and automatically waters plants when dry. Includes Blynk app integration for remote control & data logs. Reduces water waste and ensures optimal plant growth.</div>
-        </div>
-
-        <div class="project-item">
-          <div class="project-name"><i class="fas fa-cane"></i> 🧑‍🦯 Blind Navigation Stick</div>
-          <div class="project-desc">Arduino Uno based smart walking stick with ultrasonic sensor (HC-SR04), buzzer, and vibration motor. Detects obstacles ahead and provides instant haptic & audio feedback. Enhanced with water detection sensor and GPS module (optional) for safety — an assistive technology innovation.</div>
-        </div>
-
-        <!-- Additional relevant projects as per ECE student context (keeping consistency with previous design but without unnecessary old projects; we add few extra but related) -->
-        <div class="project-item">
-          <div class="project-name"><i class="fas fa-door-open"></i> 🔐 Smart IoT Door Lock System</div>
-          <div class="project-desc">ESP32-CAM based security system with RFID authentication, MQ-5 gas & fire sensor, servo lock, and Blynk dashboard — real-time alerts and facial image capture.</div>
-        </div>
-
-        <div class="project-item">
-          <div class="project-name"><i class="fas fa-robot"></i> 🤖 AI Phone Detection System</div>
-          <div class="project-desc">YOLOv8 based computer vision model to detect mobile phone usage in real-time, suitable for exam monitoring & safe driving initiatives.</div>
-        </div>
-
-        <div class="project-item">
-          <div class="project-name"><i class="fas fa-chart-line"></i> 📊 NeuroRevise (AI Study App)</div>
-          <div class="project-desc">PHP & MySQL web app with performance analytics, weak topic detection and revision suggestions for students — full-stack development project.</div>
-        </div>
-        
-        <div class="project-item">
-          <div class="project-name"><i class="fas fa-home"></i> 💡 Smart Home Automation</div>
-          <div class="project-desc">IoT based relay-controlled home appliance system using NodeMCU and mobile interface, enabling remote control of lights and fans.</div>
-        </div>
-
-        <div class="project-item">
-          <div class="project-name"><i class="fas fa-car"></i> 🚗 Bluetooth Controlled Car</div>
-          <div class="project-desc">Arduino + L298N motor driver with HC-05 module — smartphone-controlled robotic car with smooth maneuverability.</div>
-        </div>
-
-        <div class="project-item">
-          <div class="project-name"><i class="fas fa-ghost"></i> Ghost Node (Stealth Security)</div>
-          <div class="project-desc">ESP8266 based covert surveillance node designed for hidden monitoring and instant wireless alerts in restricted areas.</div>
+        <div class="card-title">Activity</div>
+        <div class="activity-box">
+          <div class="follower-count"><i class="fas fa-users"></i> 7 followers</div>
+          <p style="margin: 12px 0 4px;">You haven’t posted yet</p>
+          <p style="font-size: 0.8rem; color:#5e6f8d;">Posts you share will be displayed here.</p>
+          <a href="#" class="create-post-btn" id="createPostBtn"><i class="fas fa-pen-fancy"></i> Create a post</a>
+          <div class="show-all">Show all <i class="fas fa-arrow-right"></i></div>
         </div>
       </div>
 
-      <!-- Activity Section (matches screenshot) -->
+      <!-- Education: Gautam Buddha University -->
       <div class="card">
-        <div class="card-title"><i class="fas fa-chart-simple"></i> Activity</div>
-        <div class="activity-placeholder">
-          <i class="fas fa-newspaper" style="font-size: 1.6rem; color:#6c86a3;"></i>
-          <p style="margin-top: 10px;">7 followers</p>
-          <p>You haven’t posted yet</p>
-          <p style="font-size: 0.8rem;">Posts you share will be displayed here.</p>
-          <a href="#" class="btn-outline-link"><i class="fas fa-pen-fancy"></i> Create a post</a>
+        <div class="card-title">Education</div>
+        <div class="edu-item">
+          <div class="edu-title">Gautam Buddha University</div>
+          <div class="edu-meta">B tech electronic and communication engineering, Artificial intelligence and machine learning</div>
+          <div class="edu-meta">2025 – Present</div>
         </div>
       </div>
     </div>
 
-    <!-- SIDEBAR (Analytics, Suggested, Education, etc) -->
-    <div class="sidebar">
-      <!-- Suggested for you (private) -->
+    <!-- RIGHT / SIDEBAR: Suggested for you & Analytics -->
+    <div class="side-col">
+      <!-- Suggested for you card -->
       <div class="card">
-        <div class="card-title" style="font-size: 1rem;">Suggested for you</div>
+        <div class="card-title" style="font-size: 1.1rem;">Suggested for you</div>
         <div class="suggested-item">
-          <span><i class="fas fa-user-plus"></i> Priya Mehta · Product Intern</span>
+          <span><i class="fas fa-user-plus"></i> Priya Mehta · Product Designer</span>
           <i class="fas fa-ellipsis-h"></i>
         </div>
         <div class="suggested-item">
-          <span><i class="fas fa-user-plus"></i> Arjun Nair · ML Enthusiast</span>
+          <span><i class="fas fa-user-plus"></i> Ananya Verma · Data Analyst</span>
           <i class="fas fa-ellipsis-h"></i>
         </div>
         <div class="suggested-item">
-          <span><i class="fas fa-user-plus"></i> Riya Verma · Embedded Developer</span>
+          <span><i class="fas fa-user-plus"></i> Rohan Kapoor · Software Engineer</span>
           <i class="fas fa-ellipsis-h"></i>
         </div>
-        <div class="insight-text" style="margin-top: 10px;">Private to you · Based on your profile</div>
+        <div class="private-note">Private to you</div>
       </div>
 
       <!-- Analytics card -->
       <div class="card">
-        <div class="card-title" style="font-size: 1rem;"><i class="fas fa-chart-line"></i> Analytics</div>
-        <div class="insight-text">Private to you</div>
+        <div class="card-title" style="font-size: 1.1rem;">Analytics</div>
+        <div class="private-note" style="margin-bottom: 12px;">Private to you</div>
         <hr>
-        <div><span class="stat-number">5</span> profile views <span style="font-size:0.7rem;">Last 7 days</span></div>
-        <div style="margin-top: 10px;"><span class="stat-number">0</span> post impressions</div>
-        <div style="margin-top: 10px;"><span class="stat-number">1</span> search appearance</div>
-        <a href="#" style="display: block; margin-top: 14px; font-size:0.75rem; color:#0a66c2;">Show more insights →</a>
-      </div>
-
-      <!-- Education -->
-      <div class="card">
-        <div class="card-title"><i class="fas fa-graduation-cap"></i> Education</div>
-        <div class="edu-item">
-          <div class="edu-title">Gautam Buddha University</div>
-          <div class="edu-meta">B.Tech Electronics and Communication Engineering, Artificial Intelligence and Machine Learning</div>
-          <div class="edu-meta">2025 – Present</div>
+        <div class="analytics-stats">
+          <p><span class="stat-number">5</span> profile views <span style="font-size:0.75rem; color:#5e6f8d;"> · Last 7d</span></p>
+          <p><span class="stat-number">0</span> post impressions</p>
+          <p><span class="stat-number">1</span> search appearance</p>
         </div>
-        <div class="edu-item">
-          <div class="edu-title">Senior Secondary Education</div>
-          <div class="edu-meta">Delhi Public School, 2023</div>
-        </div>
+        <div class="show-all" style="margin-top: 12px; text-align: left;">Discover insights →</div>
       </div>
-
-      <!-- Skills / tech stack mini -->
-      <div class="card">
-        <div class="card-title"><i class="fas fa-code"></i> Technical Skills</div>
-        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-          <span style="background:#eef2ff; border-radius: 40px; padding: 4px 12px; font-size: 0.75rem;">C/C++</span>
-          <span style="background:#eef2ff; border-radius: 40px; padding: 4px 12px; font-size: 0.75rem;">Python</span>
-          <span style="background:#eef2ff; border-radius: 40px; padding: 4px 12px; font-size: 0.75rem;">Arduino</span>
-          <span style="background:#eef2ff; border-radius: 40px; padding: 4px 12px; font-size: 0.75rem;">NodeMCU</span>
-          <span style="background:#eef2ff; border-radius: 40px; padding: 4px 12px; font-size: 0.75rem;">IoT Sensors</span>
-          <span style="background:#eef2ff; border-radius: 40px; padding: 4px 12px; font-size: 0.75rem;">HTML/CSS/JS</span>
-          <span style="background:#eef2ff; border-radius: 40px; padding: 4px 12px; font-size: 0.75rem;">Video Editing</span>
+      
+      <!-- Extra note: add section placeholder to match original design but not overstuff -->
+      <div class="card" style="background: #fafcff;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-weight: 500;">✨ Profile strength: Intermediate</span>
+          <span style="font-size:0.7rem; background:#eef3fc; padding: 4px 12px; border-radius: 40px;">Add section</span>
         </div>
-      </div>
-
-      <!-- languages & interests -->
-      <div class="card">
-        <div class="card-title"><i class="fas fa-heart"></i> Interests</div>
-        <div>IoT Prototyping · Assistive Tech · Embedded AI · Video Production · Sustainability</div>
+        <div class="private-note" style="margin-top: 10px;">Enhance your profile by adding skills & projects</div>
       </div>
     </div>
   </div>
 
-  <!-- footer with subtle credit -->
   <footer>
-    <p>© 2026 Bhavya Singh — Showcasing innovative projects: Automatic Gardening Watering System & Blind Navigation Stick | Built for recruiters & collaborators</p>
-    <p style="margin-top: 6px;"><i class="fab fa-linkedin"></i> Connect on LinkedIn · <i class="fab fa-github"></i> GitHub Portfolio</p>
+    <p>© 2026 Bhavya Singh — Student Portfolio | Based on profile snapshot</p>
   </footer>
 </div>
 
-<!-- small script to mimic interactive UI feedback and basic smooth scroll -->
+<!-- Simple interactive simulation for "Get started" & "Create a post" without adding extra projects -->
 <script>
-  // Simple console greeting & optional link handling
-  document.querySelectorAll('a[href="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
+  // Get started buttons - simple alerts as per original screenshot behavior
+  const getStartedLinks = document.querySelectorAll('.gs-item a');
+  getStartedLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
       e.preventDefault();
-      console.log("Demo placeholder – profile enhancement modal would open");
-      alert("✨ This is a demo portfolio interface. In production, you can add live links!");
+      alert("✨ Feature demo: You can manage open-to-work preferences and recruiter visibility in settings.");
     });
   });
 
-  // add interaction to 'Create a post' button
-  const createPostBtn = document.querySelector('.btn-outline-link');
-  if(createPostBtn) {
-    createPostBtn.addEventListener('click', (e) => {
+  // Create a post button simulation
+  const createPost = document.getElementById('createPostBtn');
+  if (createPost) {
+    createPost.addEventListener('click', (e) => {
       e.preventDefault();
-      alert("📝 Start a post: share your project updates, internships, or tech insights!");
+      alert("📝 Start a post: Share your projects, video editing work, or academic achievements with your network!");
     });
   }
 
-  // simulate "get started" for open-to-work
-  const getStartedBtns = document.querySelectorAll('.profile-card a');
-  getStartedBtns.forEach(btn => {
-    if(btn.innerText.includes('Get started')) {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        alert("🔧 Feature ready: you can control visibility preferences for recruiters.");
-      });
-    }
+  // Discover who viewed profile link
+  const viewLinks = document.querySelectorAll('.stat-link');
+  viewLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      alert("🔍 Profile analytics: upgrade to premium for detailed viewer insights, but you can still grow engagement.");
+    });
+  });
+
+  // Show all activity link
+  const showAllBtn = document.querySelector('.show-all');
+  if (showAllBtn) {
+    showAllBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      alert("📢 Activity feed: posts, comments and reactions will appear here once you start engaging.");
+    });
+  }
+
+  // Suggested for you dots just dummy
+  const dots = document.querySelectorAll('.suggested-item .fa-ellipsis-h');
+  dots.forEach(dot => {
+    dot.addEventListener('click', (e) => {
+      e.stopPropagation();
+      alert("Not interested or follow suggestions — this is a demo interface.");
+    });
   });
 </script>
-
 </body>
 </html>
