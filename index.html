@@ -6,8 +6,8 @@
   <title>Bhavya Singh | Student Portfolio</title>
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- Google Fonts: Inter for clean LinkedIn-like style -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <!-- Google Fonts: Inter for clean modern look -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -17,14 +17,14 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #f3f6fa;
-      color: #1e2a3e;
+      background: #f4f7fc;
+      color: #1e293b;
       line-height: 1.5;
       scroll-behavior: smooth;
     }
 
     .container {
-      max-width: 1080px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 24px 20px;
     }
@@ -34,8 +34,9 @@
       background: white;
       border-radius: 28px;
       padding: 1.8rem 2rem 1.5rem 2rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-      margin-bottom: 24px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+      margin-bottom: 28px;
+      transition: all 0.2s;
     }
 
     .profile-flex {
@@ -48,29 +49,29 @@
 
     .profile-left {
       display: flex;
-      gap: 20px;
+      gap: 22px;
       flex-wrap: wrap;
       align-items: center;
     }
 
     .avatar-circle {
       background: linear-gradient(145deg, #0a66c2, #004182);
-      width: 90px;
-      height: 90px;
+      width: 96px;
+      height: 96px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2.8rem;
+      font-size: 3rem;
       color: white;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     }
 
     .profile-info h1 {
-      font-size: 1.9rem;
+      font-size: 2rem;
       font-weight: 700;
       color: #000;
-      margin-bottom: 2px;
+      margin-bottom: 4px;
     }
 
     .pronouns {
@@ -104,7 +105,7 @@
       margin: 6px 0;
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 16px;
       align-items: center;
     }
 
@@ -140,10 +141,10 @@
     .get-started-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 24px;
+      gap: 28px;
       background: #f9fafc;
       border-radius: 24px;
-      padding: 16px 20px;
+      padding: 16px 24px;
       margin-top: 24px;
       border: 1px solid #edf2f7;
     }
@@ -166,9 +167,9 @@
     .stats-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 28px;
-      margin-top: 20px;
-      padding-top: 18px;
+      gap: 36px;
+      margin-top: 24px;
+      padding-top: 20px;
       border-top: 1px solid #e9edf2;
     }
 
@@ -188,7 +189,7 @@
       color: #5e6f8d;
       font-size: 0.75rem;
       display: block;
-      margin-top: 4px;
+      margin-top: 5px;
       text-decoration: none;
     }
 
@@ -206,25 +207,26 @@
 
     .side-col {
       flex: 1.2;
-      min-width: 240px;
+      min-width: 250px;
     }
 
     /* Cards */
     .card {
       background: white;
       border-radius: 24px;
-      padding: 1.5rem;
+      padding: 1.6rem;
       margin-bottom: 24px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
       transition: 0.1s;
+      border: 1px solid #f0f2f5;
     }
 
     .card-title {
       font-size: 1.3rem;
       font-weight: 700;
       margin-bottom: 1rem;
-      border-left: 4px solid #0a66c2;
-      padding-left: 14px;
+      border-left: 5px solid #0a66c2;
+      padding-left: 16px;
     }
 
     .about-text {
@@ -250,7 +252,7 @@
       background: white;
       border: 1px solid #0a66c2;
       border-radius: 40px;
-      padding: 8px 18px;
+      padding: 8px 20px;
       font-size: 0.8rem;
       font-weight: 600;
       color: #0a66c2;
@@ -258,14 +260,20 @@
       margin-top: 16px;
       text-decoration: none;
       cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .create-post-btn:hover {
+      background: #0a66c210;
     }
 
     .show-all {
       text-align: right;
       font-size: 0.75rem;
-      margin-top: 12px;
+      margin-top: 14px;
       color: #0a66c2;
       font-weight: 500;
+      cursor: pointer;
     }
 
     /* Education */
@@ -284,11 +292,13 @@
       margin-top: 4px;
     }
 
-    /* suggested & analytics */
-    .suggested-item, .analytics-item {
+    /* Analytics card (only analytics, no suggested) */
+    .analytics-stats p {
+      margin: 12px 0;
       display: flex;
-      justify-content: space-between;
-      margin-bottom: 18px;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
     }
 
     .private-note {
@@ -297,13 +307,29 @@
       margin-top: 8px;
     }
 
-    .analytics-stats p {
-      margin: 8px 0;
+    hr {
+      margin: 14px 0;
+      border-color: #eef2f8;
     }
 
-    hr {
-      margin: 12px 0;
-      border-color: #eef2f8;
+    .insight-link {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 0.75rem;
+      color: #0a66c2;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    /* extra card for skills / add section like original but minimal */
+    .profile-tip {
+      background: #fafcff;
+      border-radius: 20px;
+      padding: 1rem 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
     footer {
@@ -312,7 +338,7 @@
       color: #6f8aac;
       padding: 2rem 0 1rem;
       border-top: 1px solid #e2e8f0;
-      margin-top: 20px;
+      margin-top: 28px;
     }
 
     @media (max-width: 750px) {
@@ -327,7 +353,7 @@
 </head>
 <body>
 <div class="container">
-  <!-- Profile Header - Exactly as per screenshot 1 -->
+  <!-- Profile Header - exactly as per screenshot (no extra projects) -->
   <div class="profile-card">
     <div class="profile-flex">
       <div class="profile-left">
@@ -352,7 +378,7 @@
       </div>
     </div>
 
-    <!-- Get started row: exactly as per screenshot -->
+    <!-- Get started row: as per original -->
     <div class="get-started-row">
       <div class="gs-item">
         <i class="fas fa-bullhorn" style="color:#0a66c2;"></i>
@@ -381,7 +407,7 @@
     </div>
   </div>
 
-  <!-- Two columns: main (About, Activity, Education) + Sidebar (Suggested, Analytics) -->
+  <!-- Two columns: main (About, Activity, Education) + Sidebar (Analytics only, no suggested) -->
   <div class="two-columns">
     <!-- LEFT / MAIN COLUMN -->
     <div class="main-col">
@@ -401,7 +427,7 @@
           <p style="margin: 12px 0 4px;">You haven’t posted yet</p>
           <p style="font-size: 0.8rem; color:#5e6f8d;">Posts you share will be displayed here.</p>
           <a href="#" class="create-post-btn" id="createPostBtn"><i class="fas fa-pen-fancy"></i> Create a post</a>
-          <div class="show-all">Show all <i class="fas fa-arrow-right"></i></div>
+          <div class="show-all" id="showAllActivity">Show all <i class="fas fa-arrow-right"></i></div>
         </div>
       </div>
 
@@ -416,46 +442,29 @@
       </div>
     </div>
 
-    <!-- RIGHT / SIDEBAR: Suggested for you & Analytics -->
+    <!-- RIGHT / SIDEBAR: ONLY Analytics (removed Suggested for you completely) -->
     <div class="side-col">
-      <!-- Suggested for you card -->
+      <!-- Analytics card - private to you -->
       <div class="card">
-        <div class="card-title" style="font-size: 1.1rem;">Suggested for you</div>
-        <div class="suggested-item">
-          <span><i class="fas fa-user-plus"></i> Priya Mehta · Product Designer</span>
-          <i class="fas fa-ellipsis-h"></i>
-        </div>
-        <div class="suggested-item">
-          <span><i class="fas fa-user-plus"></i> Ananya Verma · Data Analyst</span>
-          <i class="fas fa-ellipsis-h"></i>
-        </div>
-        <div class="suggested-item">
-          <span><i class="fas fa-user-plus"></i> Rohan Kapoor · Software Engineer</span>
-          <i class="fas fa-ellipsis-h"></i>
-        </div>
-        <div class="private-note">Private to you</div>
-      </div>
-
-      <!-- Analytics card -->
-      <div class="card">
-        <div class="card-title" style="font-size: 1.1rem;">Analytics</div>
+        <div class="card-title" style="font-size: 1.2rem;">Analytics</div>
         <div class="private-note" style="margin-bottom: 12px;">Private to you</div>
         <hr>
         <div class="analytics-stats">
-          <p><span class="stat-number">5</span> profile views <span style="font-size:0.75rem; color:#5e6f8d;"> · Last 7d</span></p>
+          <p><span class="stat-number">5</span> profile views <span style="font-size:0.75rem; color:#5e6f8d;"> · Last 7 days</span></p>
           <p><span class="stat-number">0</span> post impressions</p>
           <p><span class="stat-number">1</span> search appearance</p>
         </div>
-        <div class="show-all" style="margin-top: 12px; text-align: left;">Discover insights →</div>
+        <a href="#" class="insight-link" id="insightLink">Discover insights →</a>
       </div>
       
-      <!-- Extra note: add section placeholder to match original design but not overstuff -->
+      <!-- Minimal extra card to match "Add section / enhance profile" vibe but not intrusive -->
       <div class="card" style="background: #fafcff;">
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-          <span style="font-weight: 500;">✨ Profile strength: Intermediate</span>
-          <span style="font-size:0.7rem; background:#eef3fc; padding: 4px 12px; border-radius: 40px;">Add section</span>
+        <div class="profile-tip">
+          <span style="font-weight: 500;"><i class="fas fa-chart-simple"></i> Profile strength</span>
+          <span style="font-size:0.7rem; background:#eef3fc; padding: 4px 12px; border-radius: 40px;">Intermediate</span>
         </div>
-        <div class="private-note" style="margin-top: 10px;">Enhance your profile by adding skills & projects</div>
+        <div class="private-note" style="margin-top: 12px;">Add skills, projects, or certifications to enhance visibility.</div>
+        <div style="margin-top: 10px;"><a href="#" style="font-size:0.75rem; color:#0a66c2; text-decoration:none;">+ Add section</a></div>
       </div>
     </div>
   </div>
@@ -465,14 +474,14 @@
   </footer>
 </div>
 
-<!-- Simple interactive simulation for "Get started" & "Create a post" without adding extra projects -->
+<!-- Simple interactive simulations (only UI feedback, no extra projects/content added) -->
 <script>
-  // Get started buttons - simple alerts as per original screenshot behavior
+  // Get started buttons - demo alerts
   const getStartedLinks = document.querySelectorAll('.gs-item a');
   getStartedLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
-      alert("✨ Feature demo: You can manage open-to-work preferences and recruiter visibility in settings.");
+      alert("✨ You can manage open-to-work preferences and recruiter visibility in settings.");
     });
   });
 
@@ -481,7 +490,7 @@
   if (createPost) {
     createPost.addEventListener('click', (e) => {
       e.preventDefault();
-      alert("📝 Start a post: Share your projects, video editing work, or academic achievements with your network!");
+      alert("📝 Start a post: share your video editing projects, tech learnings, or academic achievements!");
     });
   }
 
@@ -490,27 +499,44 @@
   viewLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
-      alert("🔍 Profile analytics: upgrade to premium for detailed viewer insights, but you can still grow engagement.");
+      alert("🔍 Profile analytics: upgrade for detailed insights or keep engaging to grow visibility.");
     });
   });
 
   // Show all activity link
-  const showAllBtn = document.querySelector('.show-all');
-  if (showAllBtn) {
-    showAllBtn.addEventListener('click', (e) => {
+  const showAllActivity = document.getElementById('showAllActivity');
+  if (showAllActivity) {
+    showAllActivity.addEventListener('click', (e) => {
       e.preventDefault();
-      alert("📢 Activity feed: posts, comments and reactions will appear here once you start engaging.");
+      alert("📢 Activity feed: posts, comments, and reactions will appear once you start engaging.");
     });
   }
 
-  // Suggested for you dots just dummy
-  const dots = document.querySelectorAll('.suggested-item .fa-ellipsis-h');
-  dots.forEach(dot => {
-    dot.addEventListener('click', (e) => {
-      e.stopPropagation();
-      alert("Not interested or follow suggestions — this is a demo interface.");
+  // insight link analytics
+  const insightLink = document.getElementById('insightLink');
+  if (insightLink) {
+    insightLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      alert("📊 More analytics: See who viewed your profile, post reach, and more in-depth metrics.");
     });
-  });
+  }
+
+  // add section dummy
+  const addSectionBtn = document.querySelector('.profile-tip a');
+  if (addSectionBtn) {
+    addSectionBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      alert("➕ You can add sections like Projects, Certifications, Languages to strengthen your profile.");
+    });
+  }
+
+  // optional for "Add verification badge" demo
+  const verifyBadge = document.querySelector('.verification-badge');
+  if (verifyBadge) {
+    verifyBadge.addEventListener('click', () => {
+      alert("Verification badge: Verify your identity or email to get a verification mark.");
+    });
+  }
 </script>
 </body>
 </html>
